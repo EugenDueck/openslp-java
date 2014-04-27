@@ -6,8 +6,8 @@ http://sourceforge.net/projects/openslp/files/OpenSLP-Java/1.0.0/java_slp_api-1.
 
 Differences to original:
 
-* made it compile with Java >= 1.5, which just meant renaming all occurences of the variable name `enum` to something else.
-* mavenized (quick and dirty) so we can `mvn install` it and specify the log4j dependency, which you cannot do with a simple `mvn install:install-file`
+* made it compile with Java >= 1.5, which just meant renaming all occurences of the variable name `enum` to something else
+* mavenized (quick and dirty) so we can e.g. `mvn install` it. A simple `mvn install:install-file` of the jar file created by ant would not have done the trick, as we need to specify the dependency on `log4j`
 
 Please check the original license in `license.txt` if you want to use the library.
 
