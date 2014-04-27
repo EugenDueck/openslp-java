@@ -68,9 +68,9 @@ public class FullTest {
 		scopes.add("default");
 
 		for(int i=0;i<_iter;i++) {
-		    ServiceLocationEnumeration enum = locator.findServiceTypes("", scopes);
-		    while(enum.hasMoreElements()) {
-			ServiceType type = (ServiceType)enum.next();
+		    ServiceLocationEnumeration enum1 = locator.findServiceTypes("", scopes);
+		    while(enum1.hasMoreElements()) {
+			ServiceType type = (ServiceType)enum1.next();
 			System.out.println(type.toString());
 			ServiceLocationEnumeration enum2 = locator.findServices(type, scopes, "");
 			while(enum2.hasMoreElements()) {
@@ -85,7 +85,7 @@ public class FullTest {
 			}
 			enum2.destroy();
 		    }
-		    enum.destroy();
+		    enum1.destroy();
 		}
 	    }
 	    catch(Exception e) {

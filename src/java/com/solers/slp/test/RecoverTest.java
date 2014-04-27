@@ -25,9 +25,9 @@ public class RecoverTest {
 
 	Vector scopes = new Vector();
 	scopes.add("DEFAULT");
-	ServiceLocationEnumeration enum =
+	ServiceLocationEnumeration enum1 =
 	    loc.findServices(new ServiceType("service:slpTest"), scopes, "");
-	System.out.println(enum.next());
+	System.out.println(enum1.next());
 	System.out.println("Kill DA now.");
 	Thread.sleep(15000);
 	System.out.println("Woke up");

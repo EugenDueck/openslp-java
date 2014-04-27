@@ -110,16 +110,16 @@ class NetworkManager {
 					       _conf.getScopes(), "",
 					       Locale.getDefault());
 
-	    ServiceLocationEnumeration enum =
+	    ServiceLocationEnumeration enum1 =
 		new ServiceLocationEnumerationImpl(this, msg);
-	    if(enum.hasMoreElements()) {
-		String da = ((String)enum.next()).substring(26);
+	    if(enum1.hasMoreElements()) {
+		String da = ((String)enum1.next()).substring(26);
 
 		synchronized(this) {
 		    daAddresses.add(da);
 		}
 	    }
-	    enum.destroy();
+	    enum1.destroy();
 	}
 	catch(Exception e) {
 	    cat.info("Caught an exception discovering DA", e);

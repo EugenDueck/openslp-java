@@ -47,14 +47,14 @@ public class SlpUA {
 	    selector += "(Attribute1=" + attribute + ")";
 	}
 
-	ServiceLocationEnumeration enum =
+	ServiceLocationEnumeration enum1 =
 	    loc.findServices(new ServiceType("service:slpTest"), scopes, selector);
 
 	ServiceURL sUrl = null;
 
 	boolean connected = false;
-	while(!connected && enum.hasMoreElements()) {
-	    sUrl = (com.solers.slp.ServiceURL)enum.next();
+	while(!connected && enum1.hasMoreElements()) {
+	    sUrl = (com.solers.slp.ServiceURL)enum1.next();
 
 	    if(sUrl != null) {
 		System.out.println("Found URL: " + sUrl.toString());
@@ -70,7 +70,7 @@ public class SlpUA {
 	    }
 	}
 
-	enum.destroy();
+	enum1.destroy();
 	if(!connected) {
 	    System.out.println("Could not connect");
 	}
