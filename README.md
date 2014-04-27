@@ -3,15 +3,13 @@ openslp-java
 
 This is basically just a copy of `OpenSLP Java API`, as taken from
 http://sourceforge.net/projects/openslp/files/OpenSLP-Java/1.0.0/java_slp_api-1.0.tar.gz/download
-. The only change so far is to make it compile with Java >= 1.5, which just meant renaming all occurences of the variable name `enum` to something else. Please check the original license in `license.txt` if you want to use it.
 
-# Build and (locally) install to maven, as version 1.0.1 #
+Differences to original:
 
-```
-ant
+* made it compile with Java >= 1.5, which just meant renaming all occurences of the variable name `enum` to something else.
+* mavenized (quick and dirty) so we can `mvn install` it and specify the log4j dependency, which you cannot do with a simple `mvn install:install-file`
 
-mvn install:install-file -Dfile=lib/slp.jar -DgroupId=openslp -DartifactId=slp -Dversion=1.0.1 -Dpackaging=jar
-```
+Please check the original license in `license.txt` if you want to use the library.
 
 # Why SLP? #
 
